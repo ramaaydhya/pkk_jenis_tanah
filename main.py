@@ -22,37 +22,37 @@ con.header("Langkah 1")
 con.write("Tambahkan air pada 25 gram tanah atau lebih. Lalu, remas (uleni) sampai plastis.")
 con.write("Apakah dapat dibentuk bola di telapak tangan? Jika Ya, teruskan ke **Langkah 4**" )
 
-radio_bentuk_bola = con.radio("", ["Ya", "Tidak"], key=1)
+radio_bentuk_bola = con.radio("", ["Ya", "Tidak"], key=1, index=None)
 
 con.header("Langkah 2")
 con.write("Apakah campuran tanah terlalu kering? Jika **Ya**, **ulangi Langkah 1**")
-radio_kering = con.radio("", ["Ya", "Tidak"], key=2)
+radio_kering = con.radio("", ["Ya", "Tidak"], key=2, index=None)
 con.header("Langkah 3")
 con.write("Apakah campuran tanah terlalu basah? Jika **Ya**, tambahkan tanah kering lagi ke campuran tanah tadi dan **ulangi Langkah 1**")
-radio_basah = con.radio("", ["Ya", "Tidak"], key=3)
+radio_basah = con.radio("", ["Ya", "Tidak"], key=3, index=None)
 
 
 con.header("Langkah 4")
 con.write("Bentuk menjadi pita dengan menekan tanah menggunakan kedua ujung telunjuk dan ibu jari, kemudian dipilin.")
 con.write("Apakah mampu membentuk pita (lempengan tanah panjang) ?, Jika  **Tidak**, berhenti")
-radio_bentuk_pita = con.radio("", ["Ya", "Tidak"], key=4)
+radio_bentuk_pita = con.radio("", ["Ya", "Tidak"], key=4, index=None)
 
 
 con.header("Langkah 5")
 con.write("Bentuk pita hingga terputus kemudian ukur panjang pita. Berapakah panjangnya?")
-radio_tanya_panjang = con.radio("", ["Panjang pita < 2.5 cm sebelum terputus", "Panjang pita 2.5 - 5 cm sebelum terputus", "Panjang pita > 5 cm sebelum terputus"], key=5)
+radio_tanya_panjang = con.radio("", ["Panjang pita < 2.5 cm sebelum terputus", "Panjang pita 2.5 - 5 cm sebelum terputus", "Panjang pita > 5 cm sebelum terputus"], key=5, index=None)
 
 con.header("Langkah 6a : Jika panjang pita < 2.5 cm")
 con.write("Sentuh pita tersebut. Apa yang Anda rasakan?")
-radio_kategori_1 = con.radio("", ["Pita terasa kasar (pasir)", "Pita tidak terasa kasar (pasir) dan tidak terasa licin", "Pita terasa licin"], key=6)
+radio_kategori_1 = con.radio("", ["Pita terasa kasar (pasir)", "Pita tidak terasa kasar (pasir) dan tidak terasa licin", "Pita terasa licin"], key=6, index=None)
 
 con.header("Langkah 6b : Jika panjang pita 2.5 - 5 cm")
 con.write("Sentuh pita tersebut. Apa yang Anda rasakan?")
-radio_kategori_2 = con.radio("", ["Pita terasa kasar (pasir)", "Pita tidak terasa kasar (pasir) dan tidak terasa licin", "Pita terasa licin"], key=7)
+radio_kategori_2 = con.radio("", ["Pita terasa kasar (pasir)", "Pita tidak terasa kasar (pasir) dan tidak terasa licin", "Pita terasa licin"], key=7, index=None)
 
 con.header("Langkah 6c : Jika panjang pita > 5 cm")
 con.write("Sentuh pita tersebut. Apa yang Anda rasakan?")
-radio_kategori_3 = con.radio("", ["Pita terasa kasar (pasir)", "Pita tidak terasa kasar (pasir) dan tidak terasa licin", "Pita terasa licin"], key=8)
+radio_kategori_3 = con.radio("", ["Pita terasa kasar (pasir)", "Pita tidak terasa kasar (pasir) dan tidak terasa licin", "Pita terasa licin"], key=8, index=None)
 
 if radio_bentuk_bola == "Tidak" and radio_kering == "Tidak" and radio_basah == "Tidak" :
   jenis_tanah = "sand"
